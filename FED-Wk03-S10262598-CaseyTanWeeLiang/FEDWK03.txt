@@ -1,0 +1,195 @@
+FED Wk03-------------------------------------------------------------------------
+Flexboxes-------------------------------------------------------------------------
+--HTML----------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Flex Skeleton</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<ul class="flex-container">
+		<li class="flex-item">1</li>
+		<li class="flex-item">2</li>
+		<li class="flex-item">3</li>
+		<li class="flex-item">4</li>
+		<li class="flex-item">5</li>
+		<li class="flex-item">6</li>
+	</ul>
+
+</body>
+
+</html>
+
+--CSS----------------------------------------------------------------------------
+ul{list-style: none;}
+
+.flex-container{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.flex-container > li {
+  background-color: tomato;
+  width: 100px;
+  margin: 10px;
+  text-align:  center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 292px) {
+  .flex-container{
+    flex-wrap: wrap;
+  }
+
+  .flex-container > li {
+    width:40%
+  }
+
+
+Zindex-------------------------------------------------------------------------
+--HTML----------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CA - CSS Positioning</title>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <div class="card">
+      <img class="logo" src="city-logo.svg" alt="logo">
+      <h2>Best City Guide</h2>
+      <p>Cheesecake oat cake marshmallow. Bonbon pastry apple pie danish donut bonbon marshmallow caramels. Bear claw chocolate bar lemon drops. Carrot cake jelly beans jelly beans pie.</p>
+    </div>
+  </body>
+</html>
+
+--STYLE CSS----------------------------------------------------------------------------
+.logo{
+  position: absolute;
+  top: -45px;
+  left: 125px;
+}
+
+.card{
+  position:relative;
+}
+
+--PAGE CSS----------------------------------------------------------------------------
+* {
+	box-sizing: border-box;
+}
+body {
+	color: #222;
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.5;
+	background: #e8e9e9;
+}
+h2 {
+	color: #122a68;
+	font-size: 1.6em;
+	margin-top: 1.85em;
+	margin-bottom: 0;
+}
+p {
+	margin-bottom: 0;
+	font-size: 15px;
+}
+.card {
+	width: 340px;
+	text-align: center;
+	margin: 80px auto 0;
+	padding: 1.5em;
+	background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+.logo {
+	width: 90px;
+}
+
+FORMS-------------------------------------------------------------------------
+--HTML----------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Wk03 Form Basics</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      label{
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+    
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Bodyweight Checkup: </h1>
+    <form>
+      Enter Name: <input type="name" id="name" name="name" required>
+      Enter Date: <input type="date">
+      <br>
+      
+      Enter Weight: <input type="weight" id="weight" name="weight" required>
+      Enter Height: <input type="height" id="height" name="height" required>
+    </form>
+      <br>
+    
+      <b><p>
+        Types of exercises commonly done:
+      </p></b>
+  <form>
+      <label><input type ="radio" name="activity">Walking</label>
+      <label><input type ="radio" name="activity">Jogging</label>
+      <label><input type ="radio" name="activity">Excessive Cardio Workout</label>
+      <label><input type ="radio" name="activity">Excessive Strength Workout </label>
+      </form>
+    <br>
+
+    <b><p>
+     Duration of exercise:
+    </p></b>
+
+    <form>
+      <label><input type ="checkbox" name="activity">Lesser than 30 min</label>
+      <label><input type ="checkbox" name="activity">30 min</label>
+      <label><input type ="checkbox" name="activity">1 hour</label>
+      <label><input type ="checkbox" name="activity">More than 1 hour</label>
+      </form>
+    <br>
+
+    <textarea id="comments" name="comments" rows="4" cols="50">
+      Feel free to resubmit the form to update details. An email of detailed analysis will be send to you to better improve your body condition.
+    </textarea>
+    <br>
+    <br>
+    
+      <input type="button" name="btnSubmit" value="Submit">
+    
+  </body>
+</html>
+
+--CSS----------------------------------------------------------------------------
+h1{
+  text-align: center;
+}
+
+#comments{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

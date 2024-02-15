@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Wk03 Form Basics</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      label{
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+    
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Bodyweight Checkup: </h1>
+    <form>
+      Enter Name: <input type="name" id="name" name="name" required>
+      Enter Date: <input type="date">
+      <br>
+      
+      Enter Weight: <input type="weight" id="weight" name="weight" required>
+      Enter Height: <input type="height" id="height" name="height" required>
+    </form>
+      <br>
+    
+      <b><p>
+        Types of exercises commonly done:
+      </p></b>
+  <form>
+      <label><input type ="radio" name="activity">Walking</label>
+      <label><input type ="radio" name="activity">Jogging</label>
+      <label><input type ="radio" name="activity">Excessive Cardio Workout</label>
+      <label><input type ="radio" name="activity">Excessive Strength Workout </label>
+      </form>
+    <br>
+
+    <b><p>
+     Duration of exercise:
+    </p></b>
+
+    <form>
+      <label><input type ="checkbox" name="activity">Lesser than 30 min</label>
+      <label><input type ="checkbox" name="activity">30 min</label>
+      <label><input type ="checkbox" name="activity">1 hour</label>
+      <label><input type ="checkbox" name="activity">More than 1 hour</label>
+      </form>
+    <br>
+
+    <textarea id="comments" name="comments" rows="4" cols="50">
+      Feel free to resubmit the form to update details. An email of detailed analysis will be send to you to better improve your body condition.
+    </textarea>
+    <br>
+    <br>
+    
+      <input type="button" name="btnSubmit" value="Submit">
+    
+  </body>
+</html>
+
+
